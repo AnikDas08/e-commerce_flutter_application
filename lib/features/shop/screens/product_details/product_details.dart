@@ -3,6 +3,7 @@ import 'package:flutterecommerce/common/widgets/app_bar/appbar.dart';
 import 'package:flutterecommerce/common/widgets/custom_shape/curve_edge_widget.dart';
 import 'package:flutterecommerce/common/widgets/icon/circular_icon.dart';
 import 'package:flutterecommerce/common/widgets/image/rounded_image.dart';
+import 'package:flutterecommerce/features/shop/screens/product_details/widget/product_attribute_item.dart';
 import 'package:flutterecommerce/features/shop/screens/product_details/widget/product_image_slider.dart';
 import 'package:flutterecommerce/features/shop/screens/product_details/widget/product_metadata.dart';
 import 'package:flutterecommerce/features/shop/screens/product_details/widget/rating_share.dart';
@@ -36,7 +37,10 @@ class ProductDetailsScreen extends StatelessWidget {
                   CustomRatingShare(dark: dark),
 
                   /// Price Title Stock Brand
-                  CustomProductMetadata()
+                  CustomProductMetadata(),
+
+                  /// Attribute
+                  ProductAttribute()
 
                 ],
               ),

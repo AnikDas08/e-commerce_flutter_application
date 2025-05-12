@@ -62,7 +62,7 @@ class CustomProductMetadata extends StatelessWidget {
             CustomCirculaimage(
               height: 32,
                 width: 32,
-                image: "assets/icons/arrow_icon.png"
+                image: "assets/icons/nike.png"
             ),
             CustomTitlewithverifyImage(title: "Nike"),
           ],
