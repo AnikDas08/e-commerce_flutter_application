@@ -1,0 +1,11 @@
+flutter_native_splash:
+  color: "#FFFFFF"  # Background color for light mode
+  color_dark: "#121212"  # Background color for dark mode (replaced ???? with actual color)
+  image: assets/logos/splash_logo_black.png  # Logo for light mode
+  image_dark: assets/logos/splash_logo_white.png  # Logo for dark mode
+
+  android_12:
+    color: "#FFFFFF"  # Background color for light mode
+    color_dark: "#121212"  # Background color for dark mode (replaced ???? with actual color)
+    image: assets/logos/splash_logo_black.png  # Logo for light mode
+    image_dark: assets/logos/splash_logo_white.png  # Logo for dark mode
