@@ -32,7 +32,7 @@ class CustomTitlewithverifyImage extends StatelessWidget {
         Flexible(
           child: CustomBrandTitleText(
               title: title,
-            color: dark?Colors.white:Colors.black,
+            color: textColor,
             maxLines: maxLines,
             textAlign: textAlign,
             brandTextSize: brandTextSize,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterecommerce/features/authentications/controller.onboarding/onboarding_controller.dart';
 import 'package:flutterecommerce/utills/constants/image_string.dart';
 import 'package:flutterecommerce/utills/constants/text_string.dart';
 import 'package:get/get.dart';
 
+import '../../controller/controller.onboarding/onboarding_controller.dart';
 import '../widgets/on_boarding_next_button.dart';
 import '../widgets/onboardingDotNavigation.dart';
 import '../widgets/onboardingpage.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/app_bar/appbar.dart';
-import '../../../../common/widgets/product_cart/cart_menu_icon.dart';
+import '../../../../common/widgets/product/product_cart/cart_menu_icon.dart';
 
 class CustomHomeAppbar extends StatelessWidget {
   const CustomHomeAppbar({

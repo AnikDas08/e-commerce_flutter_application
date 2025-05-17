@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterecommerce/common/widgets/image_text_widget/image_text.dart';
+import 'package:flutterecommerce/features/shop/screens/sub_category/sub_category.dart';
+import 'package:get/get.dart';
 
 class CustomHomeCategory extends StatelessWidget {
   const CustomHomeCategory({
@@ -17,7 +19,7 @@ class CustomHomeCategory extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           return CustomVerticalImage(image: "",title: "Category",onTap: (){
-
+            Get.to(SubCategoryScreen());
           },
           );
         },

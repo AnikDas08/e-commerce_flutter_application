@@ -35,15 +35,16 @@ class ProductAttribute extends StatelessWidget {
                     children: [
                       Row(
                         children: [
+
                           CustomProductText(title: "Price: ",smallSize: true,),
                           SizedBox(width: CustomSize.spaceBetweenItems/2,),
 
                           /// Actual Price
                           Text("\$36",style: Theme.of(context).textTheme.titleSmall?.copyWith(color: dark?CustomColor.light:CustomColor.dark,decoration: TextDecoration.lineThrough),),
                           SizedBox(width:16),
-                          
+
                           /// Sale Price
-                          CustomProductPrice(price: "126",dark: dark,isLarge: true,),
+                          CustomProductPrice(price: "126",dark: dark,isLarge: true,)
                         ],
                       ),
 
@@ -55,6 +56,9 @@ class ProductAttribute extends StatelessWidget {
                           CustomProductText(title: "Stock: ",smallSize: true,),
                           SizedBox(width: CustomSize.spaceBetweenItems/2,),
                           Text("In Stock",style: TextStyle(color: dark?Colors.white:Colors.black),),
+
+                          Text("\$36",style: Theme.of(context).textTheme.titleSmall?.copyWith(color: dark?CustomColor.light:CustomColor.dark,decoration: TextDecoration.lineThrough),),
+                          SizedBox(width:16),
                         ],
                       ),
                     ],
@@ -66,14 +70,38 @@ class ProductAttribute extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(height: CustomSize.spaceBetweenItems),
 
         /// Attribute
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomSectionHeading(title:"Colors"),
-            SizedBox(height: 24,),
+            CustomSectionHeading(title:"Colors",showActionButton: false,),
+            SizedBox(height: 12,),
+            Wrap(
+              spacing: 8,
+              children: [
+                CustomsChoiceChip(text: "green", selected: true,onSelected: (value){},),
+                CustomsChoiceChip(text: "blue", selected: false,onSelected: (value){},),
+                CustomsChoiceChip(text: "yellow", selected: false,onSelected: (value){},)
+              ],
+            )
 
-            CustomsChoiceChip(text: "Green", selected: false)
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomSectionHeading(title:"Size"),
+            SizedBox(height: 12,),
+            Wrap(
+              spacing: 8,
+              children: [
+                CustomsChoiceChip(text: "Eu 34", selected: true,onSelected: (value){},),
+                CustomsChoiceChip(text: "Eu 35", selected: false,onSelected: (value){},),
+                CustomsChoiceChip(text: "Eu 37", selected: false,onSelected: (value){},)
+              ],
+            )
           ],
         )
       ],

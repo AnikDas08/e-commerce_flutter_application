@@ -4,7 +4,7 @@ import 'package:flutterecommerce/utills/helper/helperfunction.dart';
 import '../../../../utills/constants/custome_color.dart';
 import '../../../../utills/constants/size.dart';
 import '../../../../utills/devices/deviceutility.dart';
-import '../../controller.onboarding/onboarding_controller.dart';
+import '../../controller/controller.onboarding/onboarding_controller.dart';
 
 class OnBordingNextButton extends StatelessWidget {
   const OnBordingNextButton({

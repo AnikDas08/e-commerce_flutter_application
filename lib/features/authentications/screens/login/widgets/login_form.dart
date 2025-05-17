@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterecommerce/features/authentications/controller/signin/signin_controller.dart';
 import 'package:flutterecommerce/features/authentications/screens/signup/signup.dart';
 import 'package:flutterecommerce/navigation_menu.dart';
+import 'package:flutterecommerce/utills/validators/validation.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utills/constants/size.dart';
 import '../../password_configaration_now/forgate_password.dart';
@@ -16,11 +19,15 @@ class CustomLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.put(LoginController());
     return Form(
+      key: controller.loginFormKey,
         child: Column(
           children: [
             /// Email form
             TextFormField(
+              controller: controller.email,
+              validator: (value)=>CustomValidation.validateEmail(value),
               decoration: InputDecoration(
                 prefixIcon: Icon(
                   Icons.subdirectory_arrow_right,
@@ -32,15 +39,24 @@ class CustomLoginForm extends StatelessWidget {
             SizedBox(
               height: CustomSize.spaceBetweenItems,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(
-                  Icons.password,
+            /// Password Form
+            Obx(
+                  () => TextFormField(
+                controller: controller.password,
+                obscureText: controller.hidePassword.value,
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.password),
+                  suffixIcon: IconButton(
+                      onPressed: () => controller.hidePassword.value =
+                      !controller.hidePassword.value,
+                      icon: Icon(controller.hidePassword.value?Iconsax.eye_slash:Iconsax.eye)),
+                  label: Text(
+                    "Password",
+                    style: TextStyle(color: dark ? Colors.white.withOpacity(0.6) : Colors.black.withOpacity(0.6)),
+                  ),
                 ),
-                label: Text("Password",style: TextStyle(color: dark?Colors.white:Colors.black),),
-                suffixIcon: Icon(Icons.remove_red_eye),
+                style: TextStyle(color: dark ? Colors.white : Colors.black),
               ),
-              style: TextStyle(color: dark ? Colors.white : Colors.black),
             ),
             SizedBox(
               height: CustomSize.spaceBetweenItems / 2,
@@ -53,7 +69,7 @@ class CustomLoginForm extends StatelessWidget {
                 /// Remember me
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    Obx(()=> Checkbox(value: controller.rememberMe.value, onChanged: (value) {(controller.rememberMe.value=!controller.rememberMe.value);})),
                     Text(
                       "Remember me",
                       style: TextStyle(
@@ -82,7 +98,7 @@ class CustomLoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
-                    Get.offAll(()=>NavigationMenu());
+                    controller.emailAndPasswordSignIn(context);
                   }, child: Text("Sign In",style: Theme.of(context).textTheme.titleMedium?.apply(color: dark?Colors.white:Colors.black))),
             ),
             SizedBox(height: 10,),

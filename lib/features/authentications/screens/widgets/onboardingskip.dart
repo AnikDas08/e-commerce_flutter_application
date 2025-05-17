@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterecommerce/features/authentications/controller.onboarding/onboarding_controller.dart';
 
 import '../../../../utills/constants/size.dart';
+import '../../controller/controller.onboarding/onboarding_controller.dart';
 
 class OnBordingSkip extends StatelessWidget {
   const OnBordingSkip({
