@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterecommerce/features/authentications/controller/signup/signup_controller.dart';
 import 'package:flutterecommerce/features/authentications/screens/login/widgets/login_divider.dart';
 import 'package:flutterecommerce/features/authentications/screens/login/widgets/social_button.dart';
 import 'package:flutterecommerce/features/authentications/screens/signup/signup_form.dart';
@@ -34,17 +35,6 @@ class SignupScreen extends StatelessWidget {
               /// Form
               CustomSignupForm(dark: dark,),
               SizedBox(height: CustomSize.spaceBetweenItems,),
-              /// I agree to pricacy tearm condition
-              TermConditionCheckbox(),
-              SizedBox(height: CustomSize.spaceBetweenItems,),
-              /// Signup Button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Get.to(VerifyEmail());
-                    }, child: Text("Create Account")),
-              ),
               SizedBox(height: CustomSize.spaceBetweenItems,),
               /// Divider
               CustomLoginDivider(dark: dark,text: "or signup with",),

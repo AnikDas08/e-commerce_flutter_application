@@ -35,7 +35,10 @@ class CustomProductMetadata extends StatelessWidget {
             ),
             SizedBox(width: 24),
             /// price
-            Text("\$258",style: Theme.of(context).textTheme.titleSmall?.apply(color: dark?Colors.white:Colors.black),),
+
+            Text("\$258",style: Theme.of(context).textTheme.titleSmall?.apply(color: dark?Colors.white:Colors.black,decoration: TextDecoration.lineThrough),),
+            SizedBox(width: 24,),
+            Text("--",style: Theme.of(context).textTheme.titleSmall?.apply(color: dark?Colors.white:Colors.black,decoration: TextDecoration.lineThrough),),
             SizedBox(width: 24,),
             CustomProductPrice(price: "126",dark: dark,isLarge: true,),
 

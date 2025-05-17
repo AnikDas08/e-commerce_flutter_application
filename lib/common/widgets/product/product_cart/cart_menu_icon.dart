@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterecommerce/features/shop/screens/cart/cart.dart';
+import 'package:get/get.dart';
 
 class CustomCartCounter extends StatelessWidget {
   const CustomCartCounter({
@@ -15,7 +17,7 @@ class CustomCartCounter extends StatelessWidget {
       children: [
         /// 🛍️ Shopping bag icon
         IconButton(
-          onPressed: onPressed,
+          onPressed: ()=>Get.to(CartScreen()),
           icon: Icon(
             Icons.shopping_bag,
             color: iconColor,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterecommerce/common/widgets/layout/custom_gridview_layout.dart';
-import 'package:flutterecommerce/common/widgets/product/product_card_vertical.dart';
+import 'package:flutterecommerce/common/widgets/product/product_cart/product_card_vertical.dart';
 import 'package:flutterecommerce/common/widgets/text/section_heading.dart';
 import 'package:flutterecommerce/utills/constants/size.dart';
 

@@ -7,7 +7,16 @@ import '../../../utills/constants/text_string.dart';
 import '../../../utills/helper/helperfunction.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen(
+      {super.key,
+        this.image="assets/images/animations/success-email-here.gif",
+        required this.title,
+        required this.subTitle,
+        required this.onPressed
+      });
+
+  final String image, title, subTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +39,7 @@ class SuccessScreen extends StatelessWidget {
 
                   /// Title & SubTitle
                   Text(
-                    CustomTexts.successHere,
+                    title,
                     style: Theme.of(context).textTheme.headlineMedium?.apply(
                           color: dark ? Colors.white : Colors.black,
                         ),
@@ -38,7 +47,7 @@ class SuccessScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: CustomSize.spaceBetweenItems),
                   Text(
-                    CustomTexts.successMessage,
+                    subTitle,
                     style: Theme.of(context).textTheme.labelLarge?.apply(
                           color: dark ? Colors.white : Colors.grey,
                         ),
@@ -49,11 +58,7 @@ class SuccessScreen extends StatelessWidget {
                   const SizedBox(height: CustomSize.spaceBetweenItems),
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Get.to(LoginScreen());
-                        },
-                        child: Text("Continue")),
+                    child: ElevatedButton(onPressed: onPressed,child: Text("Continue")),
                   ),
                 ],
               ),

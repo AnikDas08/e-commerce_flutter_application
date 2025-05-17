@@ -3,13 +3,15 @@ import 'package:flutterecommerce/common/widgets/app_bar/appbar.dart';
 import 'package:flutterecommerce/common/widgets/app_bar/tab_bar_new.dart';
 import 'package:flutterecommerce/common/widgets/custom_shape/container_shape/searchContainer.dart';
 import 'package:flutterecommerce/common/widgets/layout/custom_gridview_layout.dart';
-import 'package:flutterecommerce/common/widgets/product_cart/cart_menu_icon.dart';
 import 'package:flutterecommerce/common/widgets/text/section_heading.dart';
+import 'package:flutterecommerce/features/shop/screens/brand/all_brand.dart';
 import 'package:flutterecommerce/features/shop/screens/store/widget/category_tab.dart';
 import 'package:flutterecommerce/utills/constants/size.dart';
 import 'package:flutterecommerce/utills/helper/helperfunction.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/brand/brand_cart.dart';
+import '../../../../common/widgets/product/product_cart/cart_menu_icon.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -50,7 +52,7 @@ class StoreScreen extends StatelessWidget {
 
 
                     /// Feature band
-                    CustomSectionHeading(title: "Feature brand"),
+                    CustomSectionHeading(title: "Feature brand",onPressed: ()=>Get.to(AllBrandScreen()),),
                     SizedBox(height: 8,),
 
                     CustomGridviewLayout(

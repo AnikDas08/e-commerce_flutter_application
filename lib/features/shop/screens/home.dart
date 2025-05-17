@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutterecommerce/common/widgets/custom_shape/container_shape/primary_header_container.dart';
 import 'package:flutterecommerce/common/widgets/layout/custom_gridview_layout.dart';
-import 'package:flutterecommerce/common/widgets/product/product_card_vertical.dart';
+import 'package:flutterecommerce/common/widgets/product/product_cart/product_card_vertical.dart';
 import 'package:flutterecommerce/common/widgets/text/section_heading.dart';
+import 'package:flutterecommerce/features/shop/screens/all_products/all_products.dart';
 import 'package:flutterecommerce/features/shop/screens/home/home_appbar.dart';
 import 'package:flutterecommerce/features/shop/screens/home/home_category.dart';
 import 'package:flutterecommerce/features/shop/screens/home/promoSlider.dart';
 import 'package:flutterecommerce/utills/constants/size.dart';
+import 'package:get/get.dart';
 
 import '../../../common/widgets/custom_shape/container_shape/searchContainer.dart';
 
@@ -71,7 +73,7 @@ class HomeScreen extends StatelessWidget {
           /// Heading
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: CustomSectionHeading(title: "Popular Item"),
+            child: CustomSectionHeading(title: "Popular Item",onPressed: (){Get.to(AllProductsScreen());},),
           ),
 
           SizedBox(height: 16,),

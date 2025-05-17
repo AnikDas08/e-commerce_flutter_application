@@ -31,12 +31,12 @@ class CustomCircularIcon extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color:backgroundColor!=null?backgroundColor!: dark
-            ? Colors.black.withOpacity(0.5)
-            : Colors.white.withOpacity(0.5),
+            ? Colors.black.withOpacity(0.6)
+            : Colors.white.withOpacity(0.6),
         borderRadius: BorderRadius.circular(100),
       ),
       child: IconButton(
-          onPressed: () => (), icon: Icon(icon,color: color,)),
+          onPressed: () => (), icon: Icon(icon,color: color,size: size,)),
     );
   }
 }

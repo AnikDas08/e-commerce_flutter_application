@@ -10,7 +10,7 @@ import 'package:flutterecommerce/utills/helper/helperfunction.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../icon/circular_icon.dart';
+import '../../icon/circular_icon.dart';
 
 class CustomProductCardVertical extends StatelessWidget {
   const CustomProductCardVertical({super.key});
